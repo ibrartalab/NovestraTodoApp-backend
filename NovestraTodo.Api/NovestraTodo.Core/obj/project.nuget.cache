@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "HYyDry+KPrs=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Core\\NovestraTodo.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MC\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.7\\microsoft.extensions.dependencyinjection.abstractions.9.0.7.nupkg.sha512"
+  ],
+  "logs": []
+}
