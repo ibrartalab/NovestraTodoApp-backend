@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NovestraTodo.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3d0cda3bb001132988ec28e19a8448af24a400f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+584c11aa017792bee456de87e94b108e54cae91d")]
 [assembly: System.Reflection.AssemblyProductAttribute("NovestraTodo.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NovestraTodo.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
