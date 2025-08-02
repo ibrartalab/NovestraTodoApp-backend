@@ -12,7 +12,7 @@ namespace NovestraTodo.Infrastructure
         {
             services.AddDbContext<NovestraDbContext>(options =>
             {
-                options.UseSqlServer("Server=.;Database=NovestraTodos;Trusted_Connection=True;TrustServerCertificate=true;MultipleActiveResultSets=true;");
+                options.UseSqlServer("Server=.;Database=NovestraTodos;Trusted_Connection=True;TrustServerCertificate=true;");
             });
 
             services.AddScoped<IUserRepository, IUserRepository>();
