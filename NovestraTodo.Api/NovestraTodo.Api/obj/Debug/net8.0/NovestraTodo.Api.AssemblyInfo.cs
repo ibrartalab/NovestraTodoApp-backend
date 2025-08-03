@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NovestraTodo.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+882438ab4c0ae6e62180a0dcc4b638f6a109a738")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a95137893e5a9d0261e6e8506f122b1ad4fd3d81")]
 [assembly: System.Reflection.AssemblyProductAttribute("NovestraTodo.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NovestraTodo.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
