@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using NovestraTodo.Application;
+using NovestraTodo.Core;
 using NovestraTodo.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -11,11 +12,12 @@ namespace NovestraTodo.Api
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddAppDI(this IServiceCollection services)
+        public static IServiceCollection AddAppDI(this IServiceCollection services,IConfiguration configuration)
         {
             // Register infrastructure services here
             services.AddApplicationDI()
-                .AddInfrastructureDI();
+                .AddInfrastructureDI()
+                .AddCoreDI(configuration);
             return services;
         }
     }

@@ -1,4 +1,5 @@
 using NovestraTodo.Api;
+using NovestraTodo.Core.Options;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -8,7 +9,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddAppDI();
+//builder.Services.Configure<ConnectionStringOptions>(builder.Configuration);
+
+builder.Services.AddAppDI(builder.Configuration);
+
+
 
 var app = builder.Build();
 
