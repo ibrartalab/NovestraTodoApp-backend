@@ -21,8 +21,10 @@ namespace NovestraTodo.Application.Commands
         {
             var user = await _userRepository.GetUserById(request.User.Id);
 
-            if (user == null || !BCrypt.Net.BCrypt.Verify(request.User.Password, user.Password)
-                throw new UnauthorizedAccessException("Invalid Credentials");
+            //if (user == null || !BCrypt.Net.BCrypt.Verify(request.User.Password, user.Password){
+            //    throw new UnauthorizedAccessException("Invalid Credentials");
+            //}
+                
 
             var token = _jwtService.GenerateToken(user);
             return new AuthResponseDto

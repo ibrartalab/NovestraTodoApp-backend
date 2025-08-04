@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NovestraTodo.Application.Commands;
@@ -12,19 +13,8 @@ namespace NovestraTodo.Api.Controllers
     [ApiController]
     public class UserController(ISender sender) : ControllerBase
     {
-        //[HttpPost("")]
-        ////public async Task<IActionResult> AddUser([FromBody] UserEntity user)
-        ////{
-        ////    var result = await sender.Send(new AddUserCommand(user));
-        ////    return Ok(result);
-        ////}
-
-        //[HttpGet("all")]
-        //public async Task<IActionResult> GetAllUsers()
-        //{
-        //    var result = await sender.Send(new GetAllUsersQuery());
-        //    return Ok(result);
-        //}
+        // get all users from this endpoint
+        [Authorize]
         [HttpGet("all")]
         public async Task<ActionResult<IEnumerable<UserDto>>> GetAllUsers()
         {
@@ -33,6 +23,7 @@ namespace NovestraTodo.Api.Controllers
             return Ok(result);
         }
 
+        // get a single user by id form this endpoint
         [HttpGet("{userId}")]
         public async Task<ActionResult<UserDto>> GetUser([FromRoute] Guid userId)
         {
@@ -41,12 +32,17 @@ namespace NovestraTodo.Api.Controllers
             return Ok(result);
         }
 
+        // update an existing user by prividing id and updatedInfo from this endpoint
+        [Authorize]
         [HttpPut("{userId}")]
         public async Task<IActionResult> UpdateUser([FromRoute] Guid userId, [FromBody] UserEntity user)
         {
             var result = await sender.Send(new UpdateUserCommand(userId,user));
             return Ok(result);
         }
+
+        // delete a user from the database permanently from this endpoint
+        [Authorize]
         [HttpDelete("{userId}")]
         public async Task<IActionResult> DeleteUser([FromRoute] Guid userId)
         {

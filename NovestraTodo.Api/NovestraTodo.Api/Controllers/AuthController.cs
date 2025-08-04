@@ -30,9 +30,9 @@ namespace NovestraTodo.Api.Controllers
 
         //Secure API Endpoints
         [HttpGet("me")]
-        public async Task<ActionResult<UserDto>> GetMyProfie()
+        public async Task<ActionResult<UserDto>> GetMyProfie([FromRoute] Guid userId)
         {
-            var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            //var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             var user = await sender.Send(new GetUserQuery(userId));
             return Ok(user);
         }

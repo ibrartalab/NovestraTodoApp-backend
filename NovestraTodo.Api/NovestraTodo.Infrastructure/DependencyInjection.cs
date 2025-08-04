@@ -16,7 +16,7 @@ namespace NovestraTodo.Infrastructure
         {
             services.AddDbContext<NovestraDbContext>((provider,options) =>
             {
-                options.UseSqlServer(provider.GetRequiredService<IOptionsSnapshot<ConnectionStringOptions>>().Value.DefaultConnection;
+                options.UseSqlServer(provider.GetRequiredService<IOptionsSnapshot<ConnectionStringOptions>>().Value.DefaultConnection);
             });
 
             services.AddScoped<IUserRepository, UserRepository>();
