@@ -19,15 +19,21 @@ namespace NovestraTodo.Infrastructure.Repositories
             
         }
 
+        // Get user by username
+        public async Task<UserEntity?> GetUserByUsername(string username)
+        {
+            return await dbContext.Users.FirstOrDefaultAsync(user => user.Username == username);
+        }
+
         // Add a new user
-        public async Task<IEnumerable<UserEntity>>AddNewUser(UserEntity entity)
+        public async Task<UserEntity>AddNewUser(UserEntity entity)
         {
             entity.Id = Guid.NewGuid();
             dbContext.Users.Add(entity);
 
             await dbContext.SaveChangesAsync();
 
-            return (IEnumerable<UserEntity>)entity;
+            return (UserEntity)entity;
         }
 
         // Update a user

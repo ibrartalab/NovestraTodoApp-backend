@@ -6,7 +6,7 @@ using NovestraTodo.Core.Interfaces;
 
 namespace NovestraTodo.Application.Commands
 {
-    public record LoginUserCommand(UserEntity User):IRequest<AuthResponseDto?>;
+    public record LoginUserCommand(LoginRequestDto User):IRequest<AuthResponseDto?>;
     public class LoginUserCommandHandler: IRequestHandler<LoginUserCommand,AuthResponseDto?>
     {
         private readonly IUserRepository _userRepository;
@@ -19,7 +19,7 @@ namespace NovestraTodo.Application.Commands
 
         public async Task<AuthResponseDto?>Handle(LoginUserCommand request,CancellationToken cancellationToken)
         {
-            var user = await _userRepository.GetUserById(request.User.Id);
+            var user = await _userRepository.GetUserByUsername(request.User.Username);
 
             if (user == null || !BCrypt.Net.BCrypt.Verify(request.User.Password, user.Password)){
                 throw new UnauthorizedAccessException("Invalid Credentials");

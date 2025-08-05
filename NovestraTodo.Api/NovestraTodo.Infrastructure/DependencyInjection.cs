@@ -20,6 +20,7 @@ namespace NovestraTodo.Infrastructure
             });
 
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ITodoRepository, TodoRepository>();
             return services;
         }
     }

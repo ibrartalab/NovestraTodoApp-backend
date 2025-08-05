@@ -33,6 +33,7 @@ namespace NovestraTodo.Application.Commands
                 Id = request.User.Id,
                 FirstName = request.User.FirstName,
                 LastName = request.User.LastName,
+                Username = request.User.Username,
                 Email = request.User.Email,
                 Password = passwordHash,
                 CreatedAt = DateTime.UtcNow,

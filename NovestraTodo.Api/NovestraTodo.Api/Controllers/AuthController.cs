@@ -23,7 +23,7 @@ namespace NovestraTodo.Api.Controllers
         }
         //Login a user and give acess from this endpoint
         [HttpPost("login")]
-        public async Task<ActionResult<AuthResponseDto>> Login([FromBody] UserEntity User)
+        public async Task<ActionResult<AuthResponseDto>> Login([FromBody] LoginRequestDto User)
         {
             var result = await sender.Send(new LoginUserCommand(User));
             return Ok(result);
