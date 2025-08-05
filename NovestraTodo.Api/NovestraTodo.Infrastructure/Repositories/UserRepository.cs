@@ -13,7 +13,7 @@ namespace NovestraTodo.Infrastructure.Repositories
             return await dbContext.Users.ToListAsync();
         }
         // Get user by id
-        public async Task<UserEntity> GetUserById(Guid id)
+        public async Task<UserEntity?> GetUserById(Guid id)
         {
             return await dbContext.Users.FirstOrDefaultAsync(user => user.Id == id);
             

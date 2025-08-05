@@ -13,10 +13,10 @@ namespace NovestraTodo.Application.Commands
         private readonly IUserRepository _userRepository;
         private readonly IJwtService _jwtService;
 
-        public RegisterUserCommandHandler(IUserRepository userRepository,IJwtService jwtService)
+        public RegisterUserCommandHandler(IUserRepository UserRepository,IJwtService JwtService)
         {
-            _userRepository = userRepository;
-            _jwtService = jwtService;
+            _userRepository = UserRepository;
+            _jwtService = JwtService;
         }
 
         public async Task<AuthResponseDto>Handle(RegisterUserCommand request,CancellationToken cancellationToken)

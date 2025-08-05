@@ -6,12 +6,12 @@ using NovestraTodo.Core.Interfaces;
 
 namespace NovestraTodo.Application.Queries
 {
-    public record GetUserQuery(Guid userId):IRequest<UserDto>;
-    public class GetUserQueryHandler(IUserRepository userRepository):IRequestHandler<GetUserQuery,UserDto>
+    public record GetUserQuery(Guid UserId):IRequest<UserDto?>;
+    public class GetUserQueryHandler(IUserRepository UserRepository):IRequestHandler<GetUserQuery,UserDto?>
     {
-        public async Task<UserDto>Handle(GetUserQuery request,CancellationToken cancellationToken) {
+        public async Task<UserDto?>Handle(GetUserQuery request,CancellationToken cancellationToken) {
 
-            var user = await userRepository.GetUserById(request.userId);
+            var user = await UserRepository.GetUserById(request.UserId);
             if (user == null)
                 return null;
 

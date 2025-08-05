@@ -7,10 +7,10 @@ using NovestraTodo.Core.Entities;
     namespace NovestraTodo.Application.Queries
     {
         public record GetAllUsersQuery():IRequest<IEnumerable<UserDto>>;
-        public class GetAllUsersQueryHandler (IUserRepository userRepository):IRequestHandler<GetAllUsersQuery,IEnumerable<UserDto>>
+        public class GetAllUsersQueryHandler (IUserRepository UserRepository):IRequestHandler<GetAllUsersQuery,IEnumerable<UserDto>>
         {
             public async Task<IEnumerable<UserDto>> Handle(GetAllUsersQuery request,CancellationToken cancellationToken) {
-                var users = await userRepository.GetUsers();
+                var users = await UserRepository.GetUsers();
 
             return users.Select(u => new UserDto { 
                 Id = u.Id,
@@ -19,8 +19,6 @@ using NovestraTodo.Core.Entities;
                 Email = u.Email,
                 CreatedAt = u.CreatedAt
             });
-
-            
             }
         }
     }

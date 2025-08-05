@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace NovestraTodo.Application.Commands
 {
-    public record DeleteUserCommand(Guid userId):IRequest<bool>;
-    public class DeleteUserCommandHandler(IUserRepository userRepository):IRequestHandler<DeleteUserCommand,bool>
+    public record DeleteUserCommand(Guid UserId):IRequest<bool>;
+    public class DeleteUserCommandHandler(IUserRepository UserRepository):IRequestHandler<DeleteUserCommand,bool>
     {
         public async Task<bool>Handle(DeleteUserCommand request,CancellationToken cancellationToken)
         {
-            return (bool)await userRepository.DeleteUser(request.userId);
+            return (bool)await UserRepository.DeleteUser(request.UserId);
         }
     }
 }

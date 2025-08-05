@@ -13,6 +13,7 @@ namespace NovestraTodo.Api.Controllers
     [ApiController]
     public class AuthController(ISender sender) : ControllerBase
     {
+        //Register a user from this endpoint
         [HttpPost("register")]
         public async Task<ActionResult<AuthResponseDto>> Register([FromBody] UserEntity User)
         {
@@ -20,7 +21,7 @@ namespace NovestraTodo.Api.Controllers
 
             return Ok(result);
         }
-
+        //Login a user and give acess from this endpoint
         [HttpPost("login")]
         public async Task<ActionResult<AuthResponseDto>> Login([FromBody] UserEntity User)
         {
