@@ -22,7 +22,7 @@ namespace NovestraTodo.Infrastructure.Repositories
         // Get user by username
         public async Task<UserEntity?> GetUserByUsername(string username)
         {
-            return await dbContext.Users.FirstOrDefaultAsync(user => user.Username == username);
+            return await dbContext.Users.FirstOrDefaultAsync(user => user.UserName == username);
         }
 
         // Add a new user

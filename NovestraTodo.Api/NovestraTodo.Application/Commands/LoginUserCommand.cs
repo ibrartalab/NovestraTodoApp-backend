@@ -19,7 +19,7 @@ namespace NovestraTodo.Application.Commands
 
         public async Task<AuthResponseDto?>Handle(LoginUserCommand request,CancellationToken cancellationToken)
         {
-            var user = await _userRepository.GetUserByUsername(request.User.Username);
+            var user = await _userRepository.GetUserByUsername(request.User.UserName);
 
             if (user == null || !BCrypt.Net.BCrypt.Verify(request.User.Password, user.Password)){
                 throw new UnauthorizedAccessException("Invalid Credentials");
@@ -36,6 +36,7 @@ namespace NovestraTodo.Application.Commands
                     FirstName = user.FirstName,
                     LastName = user.LastName,
                     Email = user.Email,
+                    UserName = user.UserName,
                     CreatedAt = DateTime.UtcNow,
                 }
                 };

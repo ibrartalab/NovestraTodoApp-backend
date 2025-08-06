@@ -6,7 +6,7 @@ using NovestraTodo.Core.Interfaces;
 
 namespace NovestraTodo.Application.Commands
 {
-    public record RegisterUserCommand(UserEntity User):IRequest<AuthResponseDto>;
+    public record RegisterUserCommand(RegisterRequestDto User):IRequest<AuthResponseDto>;
 
     public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, AuthResponseDto>
     {
@@ -21,7 +21,7 @@ namespace NovestraTodo.Application.Commands
 
         public async Task<AuthResponseDto>Handle(RegisterUserCommand request,CancellationToken cancellationToken)
         {
-            var existingUser = await _userRepository.GetUserById(request.User.Id);
+            var existingUser = await _userRepository.GetUserByUsername(request.User.Username);
 
             if (existingUser != null)
                 throw new Exception("User already exist!");
@@ -30,10 +30,10 @@ namespace NovestraTodo.Application.Commands
 
             var newUser = new UserEntity
             {
-                Id = request.User.Id,
+                
                 FirstName = request.User.FirstName,
                 LastName = request.User.LastName,
-                Username = request.User.Username,
+                UserName = request.User.Username,
                 Email = request.User.Email,
                 Password = passwordHash,
                 CreatedAt = DateTime.UtcNow,
@@ -50,6 +50,7 @@ namespace NovestraTodo.Application.Commands
                     Id = newUser.Id,
                     FirstName = newUser.FirstName,
                     LastName = newUser.LastName,
+                    UserName = newUser.UserName,
                     Email = newUser.Email,
                     CreatedAt = newUser.CreatedAt
 

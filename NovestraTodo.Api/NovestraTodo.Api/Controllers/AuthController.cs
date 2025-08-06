@@ -15,7 +15,7 @@ namespace NovestraTodo.Api.Controllers
     {
         //Register a user from this endpoint
         [HttpPost("register")]
-        public async Task<ActionResult<AuthResponseDto>> Register([FromBody] UserEntity User)
+        public async Task<ActionResult<AuthResponseDto>> Register([FromBody] RegisterRequestDto User)
         {
             var result = await sender.Send(new RegisterUserCommand(User));
 
