@@ -25,14 +25,14 @@ namespace NovestraTodo.Infrastructure.Repositories
         }
 
         // Add new todo
-        public async Task<IEnumerable<TodoEntity>> AddTodo(TodoEntity entity)
+        public async Task<TodoEntity> AddTodo(TodoEntity entity)
         {
             entity.Id = Guid.NewGuid();
             dbContext.Todos.Add(entity);
 
             await dbContext.SaveChangesAsync();
 
-            return (IEnumerable<TodoEntity>)entity;
+            return (TodoEntity)entity;
         }
 
         // Update a user
@@ -42,10 +42,12 @@ namespace NovestraTodo.Infrastructure.Repositories
 
             if (todo is not null)
             {
-                todo.Title = entity.Title;
-                todo.Description = entity.Description;
-                todo.User.Id = entity.UserId;
+                todo.Id = entity.Id;
+                todo.Todo = entity.Todo;
+                
+                todo.UserId = entity.UserId;
                 todo.IsCompleted = entity.IsCompleted;
+                todo.CompletedAt = entity.CompletedAt;
 
                 await dbContext.SaveChangesAsync();
 

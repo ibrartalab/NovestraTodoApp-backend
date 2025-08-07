@@ -7,7 +7,7 @@ namespace NovestraTodo.Core.Interfaces
     {
         Task<IEnumerable<TodoEntity>> GetTodos();
         Task<TodoEntity?> GetTodoById(Guid id);
-        Task<IEnumerable<TodoEntity>> AddTodo(TodoEntity entity);
+        Task<TodoEntity> AddTodo(TodoEntity entity);
         Task<IEnumerable<TodoEntity>> UpdateTodo(Guid todoId, TodoEntity entity);
         Task<bool> DeleteTodo(Guid todoId);
     }

@@ -1,10 +1,10 @@
-﻿    using MediatR;
+﻿using MediatR;
 using NovestraTodo.Application.DTOs;
 using NovestraTodo.Core.Entities;
-    using NovestraTodo.Core.Interfaces;
+using NovestraTodo.Core.Interfaces;
 
 
-    namespace NovestraTodo.Application.Queries
+namespace NovestraTodo.Application.Queries.User
     {
         public record GetAllUsersQuery():IRequest<IEnumerable<UserDto>>;
         public class GetAllUsersQueryHandler (IUserRepository UserRepository):IRequestHandler<GetAllUsersQuery,IEnumerable<UserDto>>

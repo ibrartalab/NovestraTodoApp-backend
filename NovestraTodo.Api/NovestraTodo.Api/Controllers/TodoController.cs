@@ -3,7 +3,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NovestraTodo.Application.Commands;
+using NovestraTodo.Application.Commands.Todo;
+using NovestraTodo.Application.DTOs;
 using NovestraTodo.Application.Queries;
+using NovestraTodo.Application.Queries.Todo;
 using NovestraTodo.Core.Entities;
 
 namespace NovestraTodo.Api.Controllers
@@ -35,7 +38,7 @@ namespace NovestraTodo.Api.Controllers
         // Delete todo item from this endpoint
         [Authorize]
         [HttpDelete("{todoId}")]
-        public async Task<ActionResult<TodoEntity>> DeleteTodo(Guid todoId)
+        public async Task<ActionResult<bool>> DeleteTodo(Guid todoId)
         {
             var result = await sender.Send(new DeleteTodoCommand(todoId));
 
@@ -45,7 +48,7 @@ namespace NovestraTodo.Api.Controllers
         // Get all todo items from this endpoint 
         [Authorize]
         [HttpGet("all")]
-        public async Task<ActionResult<TodoEntity>> GetAllTodos()
+        public async Task<ActionResult<TodoDto>> GetAllTodos()
         {
             var result = await sender.Send(new GetAllTodosQuery());
 
@@ -56,7 +59,7 @@ namespace NovestraTodo.Api.Controllers
         // Get a single todo item by id from this endpoint
         [Authorize]
         [HttpGet("{todoId}")]
-        public async Task<ActionResult<TodoEntity>> GetTodo([FromRoute]Guid todoId)
+        public async Task<ActionResult<TodoDto>> GetTodo([FromRoute]Guid todoId)
         {
             var result = await sender.Send(new GetTodoByIdQuery(todoId));
 

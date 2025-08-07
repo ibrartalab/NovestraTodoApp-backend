@@ -3,8 +3,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NovestraTodo.Application.Commands;
+using NovestraTodo.Application.Commands.User;
 using NovestraTodo.Application.DTOs;
 using NovestraTodo.Application.Queries;
+using NovestraTodo.Application.Queries.User;
 using NovestraTodo.Core.Entities;
 
 namespace NovestraTodo.Api.Controllers

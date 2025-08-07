@@ -4,7 +4,7 @@ using NovestraTodo.Core.Entities;
 using NovestraTodo.Core.Interfaces;
 
 
-namespace NovestraTodo.Application.Commands
+namespace NovestraTodo.Application.Commands.User
 {
     public record RegisterUserCommand(RegisterRequestDto User):IRequest<AuthResponseDto>;
 

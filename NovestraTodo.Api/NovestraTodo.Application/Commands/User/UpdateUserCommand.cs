@@ -2,7 +2,7 @@
 using NovestraTodo.Core.Entities;
 using NovestraTodo.Core.Interfaces;
 
-namespace NovestraTodo.Application.Commands
+namespace NovestraTodo.Application.Commands.User
 {
     public record UpdateUserCommand(Guid UserId,UserEntity User):IRequest<UserEntity>;
     public class UpdateUserCommandHandler(IUserRepository UserRepository): IRequestHandler<UpdateUserCommand,UserEntity>

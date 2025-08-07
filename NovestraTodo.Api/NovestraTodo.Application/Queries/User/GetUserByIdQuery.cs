@@ -4,7 +4,7 @@ using NovestraTodo.Core.Entities;
 using NovestraTodo.Core.Interfaces;
 
 
-namespace NovestraTodo.Application.Queries
+namespace NovestraTodo.Application.Queries.User
 {
     public record GetUserQuery(Guid UserId):IRequest<UserDto?>;
     public class GetUserQueryHandler(IUserRepository UserRepository):IRequestHandler<GetUserQuery,UserDto?>
