@@ -28,7 +28,7 @@ namespace NovestraTodo.Api.Controllers
         // Update todo item from this endpoint
         [Authorize]
         [HttpPut("{todoId}")]
-        public async Task<ActionResult<TodoEntity>> UpddateTodo(Guid todoId,TodoEntity Todo)
+        public async Task<ActionResult<TodoEntity>> UpddateTodo([FromRoute]Guid todoId,[FromBody]TodoEntity Todo)
         {
             var result = await sender.Send(new UpdateTodoCommand(todoId,Todo));
 
@@ -52,6 +52,15 @@ namespace NovestraTodo.Api.Controllers
         {
             var result = await sender.Send(new GetAllTodosQuery());
 
+            return Ok(result);
+        }
+
+        //Get all todos by user id from this endpoint for a specific user
+        [Authorize]
+        [HttpGet("user/{userId}")]
+        public async Task<ActionResult<List<TodoDto>>> GetTodosByUserId([FromRoute]Guid userId)
+        {
+            var result = await sender.Send(new GetTodosByUserIdQuery(userId));
             return Ok(result);
         }
 

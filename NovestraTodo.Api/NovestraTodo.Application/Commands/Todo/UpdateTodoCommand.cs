@@ -6,8 +6,8 @@ using NovestraTodo.Core.Interfaces;
 
 namespace NovestraTodo.Application.Commands.Todo
 {
-    public record UpdateTodoCommand(Guid TodoId,TodoEntity Todo):IRequest<TodoDto>;
-    public class UpdateTodoCommandHandler(ITodoRepository TodoRepository): IRequestHandler<UpdateTodoCommand,TodoDto>
+    public record UpdateTodoCommand(Guid TodoId,TodoEntity Todo):IRequest<TodoEntity>;
+    public class UpdateTodoCommandHandler(ITodoRepository TodoRepository): IRequestHandler<UpdateTodoCommand,TodoEntity>
     {
         //private readonly ITodoRepository _todoRepository;
 
@@ -15,9 +15,9 @@ namespace NovestraTodo.Application.Commands.Todo
         //    _todoRepository = (ITodoRepository?) TodoRepository;
         //}
 
-        public async Task<TodoDto>Handle(UpdateTodoCommand request,CancellationToken cancellationToken)
+        public async Task<TodoEntity>Handle(UpdateTodoCommand request,CancellationToken cancellationToken)
         {
-            return (TodoDto) await TodoRepository.UpdateTodo(request.TodoId, request.Todo);
+            return (TodoEntity) await TodoRepository.UpdateTodo(request.TodoId, request.Todo);
         }
     }
 }
