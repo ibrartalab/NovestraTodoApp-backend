@@ -28,7 +28,7 @@ namespace NovestraTodo.Api.Controllers
         // Update todo item from this endpoint
         [Authorize]
         [HttpPut("{todoId}")]
-        public async Task<ActionResult<TodoEntity>> UpddateTodo([FromRoute]Guid todoId,[FromBody]TodoEntity Todo)
+        public async Task<ActionResult<TodoEntity>> UpddateTodo([FromRoute]int todoId,[FromBody]TodoEntity Todo)
         {
             var result = await sender.Send(new UpdateTodoCommand(todoId,Todo));
 
@@ -38,9 +38,9 @@ namespace NovestraTodo.Api.Controllers
         // Delete todo item from this endpoint
         [Authorize]
         [HttpDelete("{todoId}")]
-        public async Task<ActionResult<bool>> DeleteTodo(Guid todoId)
+        public async Task<ActionResult<bool>> DeleteTodo(int Id)
         {
-            var result = await sender.Send(new DeleteTodoCommand(todoId));
+            var result = await sender.Send(new DeleteTodoCommand(Id));
 
             return Ok(result);
         }
@@ -68,9 +68,9 @@ namespace NovestraTodo.Api.Controllers
         // Get a single todo item by id from this endpoint
         [Authorize]
         [HttpGet("{todoId}")]
-        public async Task<ActionResult<TodoDto>> GetTodo([FromRoute]Guid todoId)
+        public async Task<ActionResult<TodoDto>> GetTodo([FromRoute]int Id)
         {
-            var result = await sender.Send(new GetTodoByIdQuery(todoId));
+            var result = await sender.Send(new GetTodoByIdQuery(Id));
 
             return Ok(result);
         }

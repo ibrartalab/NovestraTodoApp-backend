@@ -1,5 +1,4 @@
-﻿
-using NovestraTodo.Core.Entities;
+﻿using NovestraTodo.Core.Entities;
 
 namespace NovestraTodo.Core.Interfaces
 {
@@ -7,9 +6,9 @@ namespace NovestraTodo.Core.Interfaces
     {
         Task<IEnumerable<TodoEntity>> GetTodos();
         Task<List<TodoEntity>> GetTodosByUserId(Guid userId);
-        Task<TodoEntity?> GetTodoById(Guid id);
+        Task<TodoEntity?> GetTodoById(int id);
         Task<TodoEntity> AddTodo(TodoEntity entity);
-        Task<TodoEntity> UpdateTodo(Guid todoId, TodoEntity entity);
-        Task<bool> DeleteTodo(Guid todoId);
+        Task<TodoEntity> UpdateTodo(int todoId, TodoEntity entity);
+        Task<bool> DeleteTodo(int todoId);
     }
 }

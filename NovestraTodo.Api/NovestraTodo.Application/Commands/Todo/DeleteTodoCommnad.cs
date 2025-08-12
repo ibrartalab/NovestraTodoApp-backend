@@ -4,7 +4,7 @@ using NovestraTodo.Core.Interfaces;
 
 namespace NovestraTodo.Application.Commands.Todo
 {
-    public record DeleteTodoCommand(Guid TodoId):IRequest<bool>;
+    public record DeleteTodoCommand(int TodoId):IRequest<bool>;
     public class DeleteTodoCommnadHandler(ITodoRepository TodoRespository):IRequestHandler<DeleteTodoCommand,bool>
     {
        

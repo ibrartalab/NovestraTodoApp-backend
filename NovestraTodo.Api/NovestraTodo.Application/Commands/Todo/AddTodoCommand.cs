@@ -27,7 +27,7 @@ namespace NovestraTodo.Application.Commands.Todo
 
             var newTodo = new TodoEntity
             {
-                Id = Guid.NewGuid(),
+                
                 Todo = request.Todo.Todo,
                 IsCompleted = request.Todo.IsCompleted,
                 CreatedAt = DateTime.UtcNow,
@@ -39,7 +39,7 @@ namespace NovestraTodo.Application.Commands.Todo
 
             return new TodoDto
             {
-                Id = newTodo.Id,
+                Id=newTodo.Id,
                 Todo = newTodo.Todo,
                 IsCompleted = newTodo.IsCompleted,
                 CreatedAt = newTodo.CreatedAt,

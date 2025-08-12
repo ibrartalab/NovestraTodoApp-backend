@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace NovestraTodo.Application.Queries.Todo
 {
-    public record GetTodoByIdQuery(Guid Id):IRequest<TodoDto?>;
+    public record GetTodoByIdQuery(int Id):IRequest<TodoDto?>;
     public class GetTodoByIdQueryHandler(ITodoRepository TodoRespository):IRequestHandler<GetTodoByIdQuery,TodoDto?>
     {
         public async Task<TodoDto?>Handle(GetTodoByIdQuery request,CancellationToken cancellationToken)

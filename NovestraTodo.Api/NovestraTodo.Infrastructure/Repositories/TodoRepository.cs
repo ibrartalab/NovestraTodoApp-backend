@@ -27,7 +27,7 @@ namespace NovestraTodo.Infrastructure.Repositories
                 .ToListAsync();
         }
         // Get todo by id
-        public async Task<TodoEntity?> GetTodoById(Guid id)
+        public async Task<TodoEntity?> GetTodoById(int id)
         {
             return  await dbContext.Todos.FirstOrDefaultAsync(todo => todo.Id == id) as TodoEntity;
 
@@ -36,7 +36,7 @@ namespace NovestraTodo.Infrastructure.Repositories
         // Add new todo
         public async Task<TodoEntity> AddTodo(TodoEntity entity)
         {
-            entity.Id = Guid.NewGuid();
+            
             dbContext.Todos.Add(entity);
 
             await dbContext.SaveChangesAsync();
@@ -45,7 +45,7 @@ namespace NovestraTodo.Infrastructure.Repositories
         }
 
         // Update a user
-        public async Task<TodoEntity> UpdateTodo(Guid todoId, TodoEntity entity)
+        public async Task<TodoEntity> UpdateTodo(int todoId, TodoEntity entity)
         {
             var todo = await dbContext.Todos.FirstOrDefaultAsync(todo => todo.Id == todoId);
 
@@ -54,6 +54,7 @@ namespace NovestraTodo.Infrastructure.Repositories
                 todo.Todo = entity.Todo;
                 todo.IsCompleted = entity.IsCompleted;
                 todo.CompletedAt = entity.CompletedAt;
+                todo.IsRemoved = entity.IsRemoved;
 
                 await dbContext.SaveChangesAsync();
 
@@ -64,7 +65,7 @@ namespace NovestraTodo.Infrastructure.Repositories
         }
 
         // Delete a user
-        public async Task<bool> DeleteTodo(Guid todoId)
+        public async Task<bool> DeleteTodo(int todoId)
         {
             var todo = await dbContext.Todos.FirstOrDefaultAsync(todo => todo.Id == todoId);
 
