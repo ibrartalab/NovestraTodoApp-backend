@@ -4,7 +4,7 @@ namespace NovestraTodo.Core.Interfaces
 {
     public interface ITodoRepository
     {
-        Task<IEnumerable<TodoEntity>> GetTodos();
+        Task<IEnumerable<TodoEntity>> GetAllAsync();
         Task<List<TodoEntity>> GetTodosByUserId(Guid userId);
         Task<TodoEntity?> GetTodoById(int id);
         Task<TodoEntity> AddTodo(TodoEntity entity);

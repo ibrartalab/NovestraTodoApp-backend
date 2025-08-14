@@ -16,9 +16,4 @@
     <ProjectReference Include="..\NovestraTodo.Core\NovestraTodo.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Services\Interfaces\" />
-    <Folder Include="Services\Implementation\" />
-  </ItemGroup>
-
 </Project>
