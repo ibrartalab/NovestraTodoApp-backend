@@ -14,7 +14,7 @@ namespace NovestraTodo.Api
     {
         public static IServiceCollection AddAppDI(this IServiceCollection services,IConfiguration configuration)
         {
-            // Register infrastructure services here
+            // Register services here
             services.AddApplicationDI()
                 .AddInfrastructureDI()
                 .AddCoreDI(configuration);
