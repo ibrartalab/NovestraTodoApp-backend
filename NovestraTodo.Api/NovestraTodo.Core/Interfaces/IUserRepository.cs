@@ -5,11 +5,11 @@ namespace NovestraTodo.Core.Interfaces
 {
     public interface IUserRepository
     {
-        Task<IEnumerable<UserEntity>> GetUsers();
-        Task<UserEntity?> GetUserById(Guid id);
-        Task<UserEntity?> GetUserByUsername(string username);
-        Task<UserEntity> AddNewUser(UserEntity entity);
-        Task<IEnumerable<UserEntity>> UpdateUser(Guid userId, UserEntity entity);
-        Task<bool> DeleteUser(Guid userId);
+        Task<IEnumerable<UserEntity>> GetAllUsersAsync();
+        Task<UserEntity?> GetUserByIdAsync(Guid id);
+        Task<UserEntity?> GetUserByUsernameAsync(string username);
+        Task<UserEntity> AddUserAsync(UserEntity entity);
+        Task<IEnumerable<UserEntity>> UpdateUserAsync(Guid userId, UserEntity entity);
+        Task<bool> DeleteUserAsync(Guid userId);
     }
 }

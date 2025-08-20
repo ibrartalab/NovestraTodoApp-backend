@@ -8,25 +8,25 @@ namespace NovestraTodo.Infrastructure.Repositories
     public class UserRepository(NovestraDbContext dbContext) : IUserRepository
     {
         // Get all the users list from the db
-        public async Task<IEnumerable<UserEntity>> GetUsers()
+        public async Task<IEnumerable<UserEntity>> GetAllUsersAsync()
         {
             return await dbContext.Users.ToListAsync();
         }
         // Get user by id
-        public async Task<UserEntity?> GetUserById(Guid id)
+        public async Task<UserEntity?> GetUserByIdAsync(Guid id)
         {
             return await dbContext.Users.FirstOrDefaultAsync(user => user.Id == id);
             
         }
 
         // Get user by username
-        public async Task<UserEntity?> GetUserByUsername(string username)
+        public async Task<UserEntity?> GetUserByUsernameAsync(string username)
         {
             return await dbContext.Users.FirstOrDefaultAsync(user => user.UserName == username);
         }
 
         // Add a new user
-        public async Task<UserEntity>AddNewUser(UserEntity entity)
+        public async Task<UserEntity>AddUserAsync(UserEntity entity)
         {
             entity.Id = Guid.NewGuid();
             dbContext.Users.Add(entity);
@@ -37,7 +37,7 @@ namespace NovestraTodo.Infrastructure.Repositories
         }
 
         // Update a user
-        public async Task<IEnumerable<UserEntity>>UpdateUser(Guid userId,UserEntity entity)
+        public async Task<IEnumerable<UserEntity>>UpdateUserAsync(Guid userId,UserEntity entity)
         {
             var user = await dbContext.Users.FirstOrDefaultAsync(user => user.Id == userId);
 
@@ -56,7 +56,7 @@ namespace NovestraTodo.Infrastructure.Repositories
         }
 
         // Delete a user
-        public async Task<bool>DeleteUser(Guid userId)
+        public async Task<bool>DeleteUserAsync(Guid userId)
         {
             var user = await dbContext.Users.FirstOrDefaultAsync(user => user.Id == userId);
 

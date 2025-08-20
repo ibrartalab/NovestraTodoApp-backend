@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NovestraTodo.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+559293af9b540255090b2ea44deab3c0d424b165")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0be397ea85886ff2197befbf6f2dac7e7046d5e9")]
 [assembly: System.Reflection.AssemblyProductAttribute("NovestraTodo.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NovestraTodo.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

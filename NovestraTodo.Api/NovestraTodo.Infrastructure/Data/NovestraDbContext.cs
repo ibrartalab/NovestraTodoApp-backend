@@ -3,9 +3,14 @@ using NovestraTodo.Core.Entities;
 
 namespace NovestraTodo.Infrastructure.Data
 {
-    public class NovestraDbContext(DbContextOptions<NovestraDbContext> options) : DbContext(options)
+    public class NovestraDbContext : DbContext
     {
-        public DbSet<UserEntity> Users { get; set; }
+        public NovestraDbContext (DbContextOptions<NovestraDbContext> options)
+            : base(options)
+        {
+            
+        }
         public DbSet<TodoEntity> Todos { get; set; }
+        public DbSet<UserEntity> Users { get; set; }
     }
 }
