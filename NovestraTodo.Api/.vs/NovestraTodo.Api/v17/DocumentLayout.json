@@ -7,20 +7,48 @@
       "RelativeMoniker": "D:0:0:{EED14E02-DE19-44A4-85C6-B70B6141D47F}|NovestraTodo.Api\\NovestraTodo.Api.csproj|solutionrelative:novestratodo.api\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A8A6F203-14BB-4664-98DF-A31C115D2EF7}|NovestraTodo.Application\\NovestraTodo.Application.csproj|c:\\users\\mc\\onedrive\\desktop\\novestra\\projects\\novestratodoapp\\api.server\\novestratodo.api\\novestratodo.application\\services\\interfaces\\itodoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8A6F203-14BB-4664-98DF-A31C115D2EF7}|NovestraTodo.Application\\NovestraTodo.Application.csproj|solutionrelative:novestratodo.application\\services\\interfaces\\itodoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EED14E02-DE19-44A4-85C6-B70B6141D47F}|NovestraTodo.Api\\NovestraTodo.Api.csproj|c:\\users\\mc\\onedrive\\desktop\\novestra\\projects\\novestratodoapp\\api.server\\novestratodo.api\\novestratodo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EED14E02-DE19-44A4-85C6-B70B6141D47F}|NovestraTodo.Api\\NovestraTodo.Api.csproj|solutionrelative:novestratodo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A8A6F203-14BB-4664-98DF-A31C115D2EF7}|NovestraTodo.Application\\NovestraTodo.Application.csproj|c:\\users\\mc\\onedrive\\desktop\\novestra\\projects\\novestratodoapp\\api.server\\novestratodo.api\\novestratodo.application\\services\\implementation\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8A6F203-14BB-4664-98DF-A31C115D2EF7}|NovestraTodo.Application\\NovestraTodo.Application.csproj|solutionrelative:novestratodo.application\\services\\implementation\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EED14E02-DE19-44A4-85C6-B70B6141D47F}|NovestraTodo.Api\\NovestraTodo.Api.csproj|c:\\users\\mc\\onedrive\\desktop\\novestra\\projects\\novestratodoapp\\api.server\\novestratodo.api\\novestratodo.api\\middlewars\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EED14E02-DE19-44A4-85C6-B70B6141D47F}|NovestraTodo.Api\\NovestraTodo.Api.csproj|solutionrelative:novestratodo.api\\middlewars\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EED14E02-DE19-44A4-85C6-B70B6141D47F}|NovestraTodo.Api\\NovestraTodo.Api.csproj|c:\\users\\mc\\onedrive\\desktop\\novestra\\projects\\novestratodoapp\\api.server\\novestratodo.api\\novestratodo.api\\novestratodo.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{EED14E02-DE19-44A4-85C6-B70B6141D47F}|NovestraTodo.Api\\NovestraTodo.Api.csproj|solutionrelative:novestratodo.api\\novestratodo.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6298112B-CD74-436E-AA08-480AEA72DB94}|NovestraTodo.Infrastructure\\NovestraTodo.Infrastructure.csproj|c:\\users\\mc\\onedrive\\desktop\\novestra\\projects\\novestratodoapp\\api.server\\novestratodo.api\\novestratodo.infrastructure\\repositories\\todorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6298112B-CD74-436E-AA08-480AEA72DB94}|NovestraTodo.Infrastructure\\NovestraTodo.Infrastructure.csproj|solutionrelative:novestratodo.infrastructure\\repositories\\todorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EED14E02-DE19-44A4-85C6-B70B6141D47F}|NovestraTodo.Api\\NovestraTodo.Api.csproj|c:\\users\\mc\\onedrive\\desktop\\novestra\\projects\\novestratodoapp\\api.server\\novestratodo.api\\novestratodo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EED14E02-DE19-44A4-85C6-B70B6141D47F}|NovestraTodo.Api\\NovestraTodo.Api.csproj|solutionrelative:novestratodo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A8A6F203-14BB-4664-98DF-A31C115D2EF7}|NovestraTodo.Application\\NovestraTodo.Application.csproj|c:\\users\\mc\\onedrive\\desktop\\novestra\\projects\\novestratodoapp\\api.server\\novestratodo.api\\novestratodo.application\\services\\implementation\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8A6F203-14BB-4664-98DF-A31C115D2EF7}|NovestraTodo.Application\\NovestraTodo.Application.csproj|solutionrelative:novestratodo.application\\services\\implementation\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CAD5EAB-5C01-4D4B-AD68-50AB4198AE2E}|NovestraTodo.Tests\\NovestraTodo.Tests.csproj|c:\\users\\mc\\onedrive\\desktop\\novestra\\projects\\novestratodoapp\\api.server\\novestratodo.api\\novestratodo.tests\\services\\user\\getuserstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CAD5EAB-5C01-4D4B-AD68-50AB4198AE2E}|NovestraTodo.Tests\\NovestraTodo.Tests.csproj|solutionrelative:novestratodo.tests\\services\\user\\getuserstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CAD5EAB-5C01-4D4B-AD68-50AB4198AE2E}|NovestraTodo.Tests\\NovestraTodo.Tests.csproj|c:\\users\\mc\\onedrive\\desktop\\novestra\\projects\\novestratodoapp\\api.server\\novestratodo.api\\novestratodo.tests\\novestratodo.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2CAD5EAB-5C01-4D4B-AD68-50AB4198AE2E}|NovestraTodo.Tests\\NovestraTodo.Tests.csproj|solutionrelative:novestratodo.tests\\novestratodo.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8A6F203-14BB-4664-98DF-A31C115D2EF7}|NovestraTodo.Application\\NovestraTodo.Application.csproj|c:\\users\\mc\\onedrive\\desktop\\novestra\\projects\\novestratodoapp\\api.server\\novestratodo.api\\novestratodo.application\\services\\implementation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8A6F203-14BB-4664-98DF-A31C115D2EF7}|NovestraTodo.Application\\NovestraTodo.Application.csproj|solutionrelative:novestratodo.application\\services\\implementation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CAD5EAB-5C01-4D4B-AD68-50AB4198AE2E}|NovestraTodo.Tests\\NovestraTodo.Tests.csproj|c:\\users\\mc\\onedrive\\desktop\\novestra\\projects\\novestratodoapp\\api.server\\novestratodo.api\\novestratodo.tests\\services\\userservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CAD5EAB-5C01-4D4B-AD68-50AB4198AE2E}|NovestraTodo.Tests\\NovestraTodo.Tests.csproj|solutionrelative:novestratodo.tests\\services\\userservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CAD5EAB-5C01-4D4B-AD68-50AB4198AE2E}|NovestraTodo.Tests\\NovestraTodo.Tests.csproj|c:\\users\\mc\\onedrive\\desktop\\novestra\\projects\\novestratodoapp\\api.server\\novestratodo.api\\novestratodo.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CAD5EAB-5C01-4D4B-AD68-50AB4198AE2E}|NovestraTodo.Tests\\NovestraTodo.Tests.csproj|solutionrelative:novestratodo.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8A6F203-14BB-4664-98DF-A31C115D2EF7}|NovestraTodo.Application\\NovestraTodo.Application.csproj|c:\\users\\mc\\onedrive\\desktop\\novestra\\projects\\novestratodoapp\\api.server\\novestratodo.api\\novestratodo.application\\services\\interfaces\\itodoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8A6F203-14BB-4664-98DF-A31C115D2EF7}|NovestraTodo.Application\\NovestraTodo.Application.csproj|solutionrelative:novestratodo.application\\services\\interfaces\\itodoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6298112B-CD74-436E-AA08-480AEA72DB94}|NovestraTodo.Infrastructure\\NovestraTodo.Infrastructure.csproj|c:\\users\\mc\\onedrive\\desktop\\novestra\\projects\\novestratodoapp\\api.server\\novestratodo.api\\novestratodo.infrastructure\\data\\novestradbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,10 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A8A6F203-14BB-4664-98DF-A31C115D2EF7}|NovestraTodo.Application\\NovestraTodo.Application.csproj|c:\\users\\mc\\onedrive\\desktop\\novestra\\projects\\novestratodoapp\\api.server\\novestratodo.api\\novestratodo.application\\services\\implementation\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A8A6F203-14BB-4664-98DF-A31C115D2EF7}|NovestraTodo.Application\\NovestraTodo.Application.csproj|solutionrelative:novestratodo.application\\services\\implementation\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A8A6F203-14BB-4664-98DF-A31C115D2EF7}|NovestraTodo.Application\\NovestraTodo.Application.csproj|c:\\users\\mc\\onedrive\\desktop\\novestra\\projects\\novestratodoapp\\api.server\\novestratodo.api\\novestratodo.application\\services\\implementation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8A6F203-14BB-4664-98DF-A31C115D2EF7}|NovestraTodo.Application\\NovestraTodo.Application.csproj|solutionrelative:novestratodo.application\\services\\implementation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A8A6F203-14BB-4664-98DF-A31C115D2EF7}|NovestraTodo.Application\\NovestraTodo.Application.csproj|c:\\users\\mc\\onedrive\\desktop\\novestra\\projects\\novestratodoapp\\api.server\\novestratodo.api\\novestratodo.application\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,71 +94,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Api\\Program.cs",
-              "RelativeDocumentMoniker": "NovestraTodo.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Api\\Program.cs",
-              "RelativeToolTip": "NovestraTodo.Api\\Program.cs",
-              "ViewState": "AgIAAAUAAACgMjMzMzMLwBoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T10:35:03.303Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NovestraDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Infrastructure\\Data\\NovestraDbContext.cs",
-              "RelativeDocumentMoniker": "NovestraTodo.Infrastructure\\Data\\NovestraDbContext.cs",
-              "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Infrastructure\\Data\\NovestraDbContext.cs",
-              "RelativeToolTip": "NovestraTodo.Infrastructure\\Data\\NovestraDbContext.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAswBAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Api\\Middlewars\\ExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "NovestraTodo.Api\\Middlewars\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Api\\Middlewars\\ExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "NovestraTodo.Api\\Middlewars\\ExceptionHandlingMiddleware.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAqwEIAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:45:16.558Z",
+              "WhenOpened": "2025-08-27T04:17:48.137Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "TodoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Infrastructure\\Repositories\\TodoRepository.cs",
-              "RelativeDocumentMoniker": "NovestraTodo.Infrastructure\\Repositories\\TodoRepository.cs",
-              "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Infrastructure\\Repositories\\TodoRepository.cs",
-              "RelativeToolTip": "NovestraTodo.Infrastructure\\Repositories\\TodoRepository.cs",
-              "ViewState": "AgIAAAoAAAAANDMzMzPjvwsAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:41:21.055Z",
+              "Title": "NovestraTodo.Api",
+              "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Api\\NovestraTodo.Api.csproj",
+              "RelativeDocumentMoniker": "NovestraTodo.Api\\NovestraTodo.Api.csproj",
+              "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Api\\NovestraTodo.Api.csproj",
+              "RelativeToolTip": "NovestraTodo.Api\\NovestraTodo.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-27T04:16:39.61Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TodoService.cs",
-              "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Application\\Services\\Implementation\\TodoService.cs",
-              "RelativeDocumentMoniker": "NovestraTodo.Application\\Services\\Implementation\\TodoService.cs",
-              "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Application\\Services\\Implementation\\TodoService.cs*",
-              "RelativeToolTip": "NovestraTodo.Application\\Services\\Implementation\\TodoService.cs*",
-              "ViewState": "AgIAAAgAAACAZmZmZmYswBUAAAA+AAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "GetUsersTests.cs",
+              "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Tests\\Services\\User\\GetUsersTests.cs",
+              "RelativeDocumentMoniker": "NovestraTodo.Tests\\Services\\User\\GetUsersTests.cs",
+              "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Tests\\Services\\User\\GetUsersTests.cs",
+              "RelativeToolTip": "NovestraTodo.Tests\\Services\\User\\GetUsersTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:50:51.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ITodoService.cs",
-              "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Application\\Services\\Interfaces\\ITodoService.cs",
-              "RelativeDocumentMoniker": "NovestraTodo.Application\\Services\\Interfaces\\ITodoService.cs",
-              "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Application\\Services\\Interfaces\\ITodoService.cs*",
-              "RelativeToolTip": "NovestraTodo.Application\\Services\\Interfaces\\ITodoService.cs*",
-              "ViewState": "AgIAAAgAAAAgMzMzMzMbwBEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:50:38.819Z",
+              "WhenOpened": "2025-08-27T03:58:13.241Z",
               "EditorCaption": ""
             },
             {
@@ -145,14 +147,129 @@
               "RelativeDocumentMoniker": "NovestraTodo.Api\\Controllers\\TodoController.cs",
               "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Api\\Controllers\\TodoController.cs*",
               "RelativeToolTip": "NovestraTodo.Api\\Controllers\\TodoController.cs*",
-              "ViewState": "AgIAABgAAADAzMzMzMw7wCUAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwCAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T18:29:52.623Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Api\\Program.cs",
+              "RelativeDocumentMoniker": "NovestraTodo.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Api\\Program.cs",
+              "RelativeToolTip": "NovestraTodo.Api\\Program.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAAEUAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T10:35:03.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NovestraTodo.Tests",
+              "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Tests\\NovestraTodo.Tests.csproj",
+              "RelativeDocumentMoniker": "NovestraTodo.Tests\\NovestraTodo.Tests.csproj",
+              "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Tests\\NovestraTodo.Tests.csproj",
+              "RelativeToolTip": "NovestraTodo.Tests\\NovestraTodo.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-26T16:10:05.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TodoService.cs",
+              "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Application\\Services\\Implementation\\TodoService.cs",
+              "RelativeDocumentMoniker": "NovestraTodo.Application\\Services\\Implementation\\TodoService.cs",
+              "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Application\\Services\\Implementation\\TodoService.cs",
+              "RelativeToolTip": "NovestraTodo.Application\\Services\\Implementation\\TodoService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowBUAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T17:50:51.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TodoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Infrastructure\\Repositories\\TodoRepository.cs",
+              "RelativeDocumentMoniker": "NovestraTodo.Infrastructure\\Repositories\\TodoRepository.cs",
+              "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Infrastructure\\Repositories\\TodoRepository.cs",
+              "RelativeToolTip": "NovestraTodo.Infrastructure\\Repositories\\TodoRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAD4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T17:41:21.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "UserServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Tests\\Services\\UserServiceTests.cs",
+              "RelativeDocumentMoniker": "NovestraTodo.Tests\\Services\\UserServiceTests.cs",
+              "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Tests\\Services\\UserServiceTests.cs",
+              "RelativeToolTip": "NovestraTodo.Tests\\Services\\UserServiceTests.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T16:10:37.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "NovestraTodo.Tests\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Tests\\UnitTest1.cs",
+              "RelativeToolTip": "NovestraTodo.Tests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T16:08:25.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "NovestraDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Infrastructure\\Data\\NovestraDbContext.cs",
+              "RelativeDocumentMoniker": "NovestraTodo.Infrastructure\\Data\\NovestraDbContext.cs",
+              "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Infrastructure\\Data\\NovestraDbContext.cs",
+              "RelativeToolTip": "NovestraTodo.Infrastructure\\Data\\NovestraDbContext.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T17:45:16.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Application\\Services\\Implementation\\UserService.cs",
+              "RelativeDocumentMoniker": "NovestraTodo.Application\\Services\\Implementation\\UserService.cs",
+              "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Application\\Services\\Implementation\\UserService.cs",
+              "RelativeToolTip": "NovestraTodo.Application\\Services\\Implementation\\UserService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwBYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T18:05:34.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ITodoService.cs",
+              "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Application\\Services\\Interfaces\\ITodoService.cs",
+              "RelativeDocumentMoniker": "NovestraTodo.Application\\Services\\Interfaces\\ITodoService.cs",
+              "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Application\\Services\\Interfaces\\ITodoService.cs",
+              "RelativeToolTip": "NovestraTodo.Application\\Services\\Interfaces\\ITodoService.cs",
+              "ViewState": "AgIAAAIAAAAgMzMzMzMbwBEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T17:50:38.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Application\\Services\\Implementation\\AuthService.cs",
               "RelativeDocumentMoniker": "NovestraTodo.Application\\Services\\Implementation\\AuthService.cs",
@@ -164,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Api\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "NovestraTodo.Api\\Controllers\\AuthController.cs",
@@ -176,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Application\\Services\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "NovestraTodo.Application\\Services\\Interfaces\\IAuthService.cs",
@@ -188,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Api\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "NovestraTodo.Api\\Controllers\\UserController.cs",
@@ -200,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Core\\Interfaces\\IUserRepository.cs",
               "RelativeDocumentMoniker": "NovestraTodo.Core\\Interfaces\\IUserRepository.cs",
@@ -212,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Application\\Services\\Interfaces\\IUserService.cs",
               "RelativeDocumentMoniker": "NovestraTodo.Application\\Services\\Interfaces\\IUserService.cs",
@@ -224,19 +341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Application\\Services\\Implementation\\UserService.cs",
-              "RelativeDocumentMoniker": "NovestraTodo.Application\\Services\\Implementation\\UserService.cs",
-              "ToolTip": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Application\\Services\\Implementation\\UserService.cs",
-              "RelativeToolTip": "NovestraTodo.Application\\Services\\Implementation\\UserService.cs",
-              "ViewState": "AgIAAAgAAADg//////8bwBEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T18:05:34.625Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "ITodoRepository.cs",
               "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Core\\Interfaces\\ITodoRepository.cs",
               "RelativeDocumentMoniker": "NovestraTodo.Core\\Interfaces\\ITodoRepository.cs",
@@ -248,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\MC\\OneDrive\\Desktop\\Novestra\\Projects\\NovestraTodoApp\\api.server\\NovestraTodo.Api\\NovestraTodo.Infrastructure\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "NovestraTodo.Infrastructure\\Repositories\\UserRepository.cs",
@@ -257,10 +362,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T18:08:38.477Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             }
           ]
         }

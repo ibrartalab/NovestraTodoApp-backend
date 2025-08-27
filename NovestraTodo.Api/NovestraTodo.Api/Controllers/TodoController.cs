@@ -20,7 +20,7 @@ namespace NovestraTodo.Api.Controllers
         //}
 
         // Get all todo items from this endpoint 
-        [Authorize]
+        //[Authorize]
         [HttpGet("all")]
         public async Task<ActionResult<TodoEntity>> GetAll()
         {
@@ -30,7 +30,7 @@ namespace NovestraTodo.Api.Controllers
         }
 
         // Get all todos for a specific user
-        [Authorize]
+        //[Authorize]
         [HttpGet("{userId}")]
         public async Task<ActionResult<TodoEntity>> GetUserAllTodos(Guid userId)
         {
@@ -59,10 +59,10 @@ namespace NovestraTodo.Api.Controllers
 
         // Delete todo item from this endpoint
         [Authorize]
-        [HttpDelete("{todoId}")]
-        public async Task<ActionResult<bool>> DeleteTodo(int Id)
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<bool>> DeleteTodo([FromRoute]int id)
         {
-            var result = await todoService.DeleteTodo(Id);
+            var result = await todoService.DeleteTodo(id);
 
             return Ok(result);
         }

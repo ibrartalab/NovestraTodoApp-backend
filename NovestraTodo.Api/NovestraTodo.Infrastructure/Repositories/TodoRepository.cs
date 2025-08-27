@@ -61,9 +61,9 @@ namespace NovestraTodo.Infrastructure.Repositories
         }
 
         // Delete a user
-        public async Task<bool> DeleteAsync(int todoId)
+        public async Task<bool> DeleteAsync(int id)
         {
-            var todo = await dbContext.Todos.FirstOrDefaultAsync(todo => todo.Id == todoId);
+            var todo = await dbContext.Todos.FirstOrDefaultAsync(todo => todo.Id == id);
 
             if (todo is not null)
             {

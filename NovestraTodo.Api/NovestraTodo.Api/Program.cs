@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using NovestraTodo.Api;
+using NovestraTodo.Api.Middlewars;
 using NovestraTodo.Application.Services.Implementation;
 using NovestraTodo.Application.Services.Interfaces;
 using NovestraTodo.Core.Interfaces;
@@ -57,9 +58,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddAuthorization();
 
 
-
-
-
 var app = builder.Build();
 app.UseCors("AllowLocalhost5173");
 
@@ -69,7 +67,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
