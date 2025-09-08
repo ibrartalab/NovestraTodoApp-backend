@@ -38,7 +38,7 @@ namespace NovestraTodo.Api.Controllers
             return Ok(result);
         }
         // Add a todo item from this endpoint
-        [Authorize]
+        //[Authorize]
         [HttpPost("")]
         public async Task<ActionResult<TodoEntity>> Add(TodoEntity Todo)
         {
@@ -60,7 +60,7 @@ namespace NovestraTodo.Api.Controllers
         // Delete todo item from this endpoint
         [Authorize]
         [HttpDelete("{id}")]
-        public async Task<ActionResult<bool>> DeleteTodo([FromRoute]int id)
+        public async Task<ActionResult<bool>> Delete([FromRoute]int id)
         {
             var result = await todoService.DeleteTodo(id);
 
