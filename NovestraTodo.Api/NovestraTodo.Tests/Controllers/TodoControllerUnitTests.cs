@@ -84,9 +84,9 @@ namespace NovestraTodo.Tests.Controllers
         public async Task Delete_ShouldReturnDeletedTodo()
         {
             //Arrange
-            var todoId = 1;
+            int todoId = 1;
             var deletedTodo = new Core.Entities.TodoEntity { Id = todoId, Todo = "Deleted Todo", IsCompleted = false,IsRemoved=true };
-            _mockTodoService.Setup(service => service.DeleteTodo(todoId)).ReturnsAsync(deletedTodo);
+            _mockTodoService.Setup(service => service.DeleteTodo(todoId)).ReturnsAsync(true);
             //Act
             var result = await _controller.Delete(todoId);
             //Assert
@@ -94,6 +94,7 @@ namespace NovestraTodo.Tests.Controllers
             var returnValue = Assert.IsType<Core.Entities.TodoEntity>(okResult.Value);
             Assert.Equal("Deleted Todo", returnValue.Todo);
             Assert.True(returnValue.IsRemoved);
+            Assert.Equal(todoId, returnValue.Id);
         }
     }
 }
