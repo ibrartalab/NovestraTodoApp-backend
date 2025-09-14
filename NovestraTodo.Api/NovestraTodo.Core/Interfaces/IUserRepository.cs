@@ -9,7 +9,7 @@ namespace NovestraTodo.Core.Interfaces
         Task<UserEntity?> GetUserByIdAsync(Guid id);
         Task<UserEntity?> GetUserByUsernameAsync(string username);
         Task<UserEntity> AddUserAsync(UserEntity entity);
-        Task<IEnumerable<UserEntity>> UpdateUserAsync(Guid userId, UserEntity entity);
+        Task<UserEntity> UpdateUserAsync(Guid userId, UserEntity entity);
         Task<bool> DeleteUserAsync(Guid userId);
     }
 }

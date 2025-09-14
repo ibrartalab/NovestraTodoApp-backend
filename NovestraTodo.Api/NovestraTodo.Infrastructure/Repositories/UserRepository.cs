@@ -37,7 +37,7 @@ namespace NovestraTodo.Infrastructure.Repositories
         }
 
         // Update a user
-        public async Task<IEnumerable<UserEntity>>UpdateUserAsync(Guid userId,UserEntity entity)
+        public async Task<UserEntity>UpdateUserAsync(Guid userId,UserEntity entity)
         {
             var user = await dbContext.Users.FirstOrDefaultAsync(user => user.Id == userId);
 
@@ -49,10 +49,10 @@ namespace NovestraTodo.Infrastructure.Repositories
 
                 await dbContext.SaveChangesAsync();
 
-                return (IEnumerable<UserEntity>) user;
+                return user;
             }
 
-            return (IEnumerable<UserEntity>)entity;
+            return null;
         }
 
         // Delete a user

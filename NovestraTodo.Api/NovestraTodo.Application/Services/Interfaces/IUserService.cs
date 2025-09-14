@@ -13,7 +13,7 @@ namespace NovestraTodo.Application.Services.Interfaces
         Task<UserEntity?> GetUserById(Guid id);
         Task<UserEntity?> GetUserByUsername(string username);
         Task<UserEntity> AddNewUser(UserEntity entity);
-        Task<IEnumerable<UserEntity>> UpdateUser(Guid userId, UserEntity entity);
+        Task<UserEntity> UpdateUser(Guid userId, UserEntity entity);
         Task<bool> DeleteUser(Guid userId);
     }
 }

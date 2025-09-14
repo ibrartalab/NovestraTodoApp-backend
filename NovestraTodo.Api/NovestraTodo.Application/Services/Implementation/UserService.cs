@@ -31,7 +31,7 @@ namespace NovestraTodo.Application.Services.Implementation
         {
             return await _userRepository.AddUserAsync(entity);
         }
-        public async Task<IEnumerable<UserEntity>> UpdateUser(Guid userId, UserEntity entity)
+        public async Task<UserEntity> UpdateUser(Guid userId, UserEntity entity)
         {
             return await _userRepository.UpdateUserAsync(userId, entity);
         }
