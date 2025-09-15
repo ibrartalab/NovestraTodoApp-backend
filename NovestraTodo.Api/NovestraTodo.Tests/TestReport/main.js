@@ -213,9 +213,9 @@ var assemblies = [
   {
     "name": "NovestraTodo.Api",
     "classes": [
-      { "name": "NovestraTodo.Api.Controllers.AuthController", "rp": "NovestraTodo.Api_AuthController.html", "cl": 0, "ucl": 9, "cal": 9, "tl": 32, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "NovestraTodo.Api.Controllers.TodoController", "rp": "NovestraTodo.Api_TodoController.html", "cl": 0, "ucl": 21, "cal": 21, "tl": 73, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "NovestraTodo.Api.Controllers.UserController", "rp": "NovestraTodo.Api_UserController.html", "cl": 0, "ucl": 17, "cal": 17, "tl": 61, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "NovestraTodo.Api.Controllers.AuthController", "rp": "NovestraTodo.Api_AuthController.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 32, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "NovestraTodo.Api.Controllers.TodoController", "rp": "NovestraTodo.Api_TodoController.html", "cl": 21, "ucl": 0, "cal": 21, "tl": 73, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "NovestraTodo.Api.Controllers.UserController", "rp": "NovestraTodo.Api_UserController.html", "cl": 17, "ucl": 0, "cal": 17, "tl": 61, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "NovestraTodo.Api.Middlewars.ExceptionHandlingMiddleware", "rp": "NovestraTodo.Api_ExceptionHandlingMiddleware.html", "cl": 0, "ucl": 51, "cal": 51, "tl": 81, "cb": 0, "tb": 12, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Program", "rp": "NovestraTodo.Api_Program.html", "cl": 0, "ucl": 50, "cal": 50, "tl": 79, "cb": 0, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
@@ -240,11 +240,11 @@ var assemblies = [
   {
     "name": "NovestraTodo.Infrastructure",
     "classes": [
-      { "name": "NovestraTodo.Infrastructure.Data.NovestraDbContext", "rp": "NovestraTodo.Infrastructure_NovestraDbContext.html", "cl": 0, "ucl": 5, "cal": 5, "tl": 16, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "NovestraTodo.Infrastructure.Data.NovestraDbContext", "rp": "NovestraTodo.Infrastructure_NovestraDbContext.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 16, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "NovestraTodo.Infrastructure.ExternalServices.JwtService", "rp": "NovestraTodo.Infrastructure_JwtService.html", "cl": 0, "ucl": 21, "cal": 21, "tl": 43, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "NovestraTodo.Infrastructure.Migrations.initialCreate", "rp": "NovestraTodo.Infrastructure_initialCreate.html", "cl": 0, "ucl": 111, "cal": 111, "tl": 156, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "NovestraTodo.Infrastructure.Migrations.NovestraDbContextModelSnapshot", "rp": "NovestraTodo.Infrastructure_NovestraDbContextModelSnapshot.html", "cl": 0, "ucl": 70, "cal": 70, "tl": 93, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "NovestraTodo.Infrastructure.Repositories.TodoRepository", "rp": "NovestraTodo.Infrastructure_TodoRepository.html", "cl": 0, "ucl": 37, "cal": 37, "tl": 78, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "NovestraTodo.Infrastructure.Repositories.TodoRepository", "rp": "NovestraTodo.Infrastructure_TodoRepository.html", "cl": 35, "ucl": 2, "cal": 37, "tl": 78, "cb": 2, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "NovestraTodo.Infrastructure.Repositories.UserRepository", "rp": "NovestraTodo.Infrastructure_UserRepository.html", "cl": 0, "ucl": 35, "cal": 35, "tl": 74, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
 ];

@@ -39,10 +39,10 @@ namespace NovestraTodo.Api.Controllers
             return Ok(result);
         }
 
-        // update an existing user by prividing id and updatedInfo from this endpoint
+        // update an existing user by providing id and updatedInfo from this endpoint
         [Authorize]
         [HttpPut("{userId}")]
-        public async Task<IActionResult> Update([FromRoute] Guid userId, [FromBody] UserEntity user)
+        public async Task<ActionResult<UserDto>> Update([FromRoute] Guid userId, [FromBody] UserEntity user)
         {
             var result = await userService.UpdateUser(userId,user);
             return Ok(result);
@@ -51,7 +51,7 @@ namespace NovestraTodo.Api.Controllers
         // delete a user from the database permanently from this endpoint
         [Authorize]
         [HttpDelete("{userId}")]
-        public async Task<IActionResult> Delete([FromRoute] Guid userId)
+        public async Task<ActionResult<bool>> Delete([FromRoute] Guid userId)
         {
             var result = await userService.DeleteUser(userId);
             return Ok(result);
