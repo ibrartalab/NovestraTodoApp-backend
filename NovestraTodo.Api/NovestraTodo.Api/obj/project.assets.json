@@ -1770,7 +1770,8 @@
           "Microsoft.EntityFrameworkCore": "9.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.7",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.7",
-          "NovestraTodo.Application": "1.0.0"
+          "NovestraTodo.Application": "1.0.0",
+          "NovestraTodo.Core": "1.0.0"
         },
         "compile": {
           "bin/placeholder/NovestraTodo.Infrastructure.dll": {}
@@ -5218,7 +5219,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

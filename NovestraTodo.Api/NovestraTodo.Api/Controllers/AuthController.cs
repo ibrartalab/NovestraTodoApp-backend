@@ -1,11 +1,7 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using NovestraTodo.Application.Commands;
-using NovestraTodo.Application.Commands.User;
 using NovestraTodo.Application.DTOs;
-using NovestraTodo.Application.Queries;
-using NovestraTodo.Application.Queries.User;
+using NovestraTodo.Application.Services.Interfaces;
 using NovestraTodo.Core.Entities;
 using System.Security.Claims;
 
@@ -13,13 +9,14 @@ namespace NovestraTodo.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthController(ISender sender) : ControllerBase
+    public class AuthController(IAuthService authService) : ControllerBase
     {
+       
         //Register a user from this endpoint
         [HttpPost("register")]
         public async Task<ActionResult<AuthResponseDto>> Register([FromBody] RegisterRequestDto User)
         {
-            var result = await sender.Send(new RegisterUserCommand(User));
+            var result = await authService.RegisterUser(User);
 
             return Ok(result);
         }
@@ -27,17 +24,9 @@ namespace NovestraTodo.Api.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<AuthResponseDto>> Login([FromBody] LoginRequestDto User)
         {
-            var result = await sender.Send(new LoginUserCommand(User));
+            var result = await authService.LoginUser(User);
             return Ok(result);
         }
 
-        //Secure API Endpoints
-        [HttpGet("me")]
-        public async Task<ActionResult<UserDto>> GetMyProfie([FromRoute] Guid userId)
-        {
-            //var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            var user = await sender.Send(new GetUserQuery(userId));
-            return Ok(user);
-        }
     }
 }
