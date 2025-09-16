@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NovestraTodo.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa7896d8b26eca7c2748f73494af7aead2626a7c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+659a739e6963ed481f9550db7ccd83124d034578")]
 [assembly: System.Reflection.AssemblyProductAttribute("NovestraTodo.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NovestraTodo.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

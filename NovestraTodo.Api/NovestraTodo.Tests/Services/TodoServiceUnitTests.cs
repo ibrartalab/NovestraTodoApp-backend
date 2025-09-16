@@ -1,4 +1,5 @@
 ﻿using Moq;
+using NovestraTodo.Application.DTOs;
 using NovestraTodo.Application.Services.Implementation;
 using NovestraTodo.Application.Services.Interfaces;
 using NovestraTodo.Core.Interfaces;
@@ -44,6 +45,7 @@ namespace NovestraTodo.Tests.Services
                 new() { Id = 1, Todo = "User Todo 1", UserId = userId, IsCompleted = false,IsRemoved=false },
                 new () { Id = 2, Todo = "User Todo 2", UserId = userId, IsCompleted = true,IsRemoved=false }
             };
+            
             _mockTodoRepository.Setup(repo => repo.GetByUserIdAsync(userId)).ReturnsAsync(todos);
             //Act
             var result = await _todoService.GetUserTodos(userId);

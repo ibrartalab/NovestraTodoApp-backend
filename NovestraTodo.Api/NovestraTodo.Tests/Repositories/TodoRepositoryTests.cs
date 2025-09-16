@@ -89,8 +89,23 @@ namespace NovestraTodo.Tests.Repositories
             // Act
             var updatedTodo = await repository.UpdateAsync(todoId,todoToUpdate);
             // Assert
+            Assert.NotNull(updatedTodo);
             Assert.Equal("Updated Todo", updatedTodo.Todo);
             Assert.True(updatedTodo.IsCompleted);
+        }
+        [Fact]
+        public async Task UpdateTodo_ShouldThrowException_WhenTodoNotFound()
+        {
+            // Arrange
+            using var dbContext = GetInMemoryDbContext();
+            var repository = new TodoRepository(dbContext);
+            int nonExistentTodoId = 999;
+            var todoToUpdate = new Core.Entities.TodoEntity { Id = nonExistentTodoId, Todo = "Non-existent Todo", IsCompleted = false, IsRemoved = false };
+            // Act & Assert
+            await Assert.ThrowsAsync<Exception>(async () =>
+            {
+                await repository.UpdateAsync(nonExistentTodoId, todoToUpdate);
+            });
         }
         [Fact]
         public async Task DeleteTodo_ShouldRemoveTodo()
@@ -102,8 +117,21 @@ namespace NovestraTodo.Tests.Repositories
             await repository.DeleteAsync(1);
             var todos = await repository.GetAllAsync();
             // Assert
+            Assert.NotNull(todos);
             Assert.Single(todos);
             Assert.DoesNotContain(todos, t => t.Id == 1);
+        }
+        [Fact]
+        public async Task DeleteTodo_ShouldReturnFalse_WhenTodoNotFound()
+        {
+            // Arrange
+            using var dbContext = GetInMemoryDbContext();
+            var repository = new TodoRepository(dbContext);
+            int nonExistentTodoId = 999;
+            // Act
+            var result = await repository.DeleteAsync(nonExistentTodoId);
+            // Assert
+            Assert.False(result);
         }
     }
 }

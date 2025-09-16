@@ -1,5 +1,6 @@
 ﻿using Moq;
 using NovestraTodo.Api.Controllers;
+using NovestraTodo.Application.DTOs;
 using NovestraTodo.Application.Services.Interfaces;
 
 namespace NovestraTodo.Tests.Controllers
@@ -20,9 +21,9 @@ namespace NovestraTodo.Tests.Controllers
         public async Task GetAll_ShouldReturnOkResult()
         {
             // Arrange
-            var users = new List<Application.DTOs.UserDto>
+            var users = new List<UserDto>
             {
-                new Application.DTOs.UserDto
+                new UserDto
                 {
                     Id = Guid.NewGuid(),
                     FirstName = "Test1",
@@ -30,7 +31,7 @@ namespace NovestraTodo.Tests.Controllers
                     UserName = "testuser1",
                     Email = "test@gmail.com",
                 },
-                new Application.DTOs.UserDto
+                new UserDto
                 {
                     Id = Guid.NewGuid(),
                     FirstName="Test2",
@@ -41,20 +42,12 @@ namespace NovestraTodo.Tests.Controllers
             };
 
             _mockUserService.Setup(service => service.GetUsers())
-                .ReturnsAsync(users.Select(u => new Core.Entities.UserEntity
-                {
-                    Id = u.Id,
-                    FirstName = u.FirstName,
-                    LastName = u.LastName,
-                    UserName = u.UserName,
-                    Email = u.Email,
-                    Password = "HashedPassword" // Simulate hashed password
-                }));
+                .ReturnsAsync(users);
             // Act
             var result = await _userController.GetAll();
             // Assert
             var okResult = Assert.IsType<Microsoft.AspNetCore.Mvc.OkObjectResult>(result.Result);
-            var returnValue = Assert.IsType<List<Application.DTOs.UserDto>>(okResult.Value);
+            var returnValue = Assert.IsType<List<UserDto>>(okResult.Value);
             Assert.Equal(2, returnValue.Count());
         }
         [Fact]
@@ -62,7 +55,7 @@ namespace NovestraTodo.Tests.Controllers
         {
             // Arrange
             var userName = "testuser1";
-            var user = new Application.DTOs.UserDto
+            var user = new UserDto
             {
                 Id = Guid.NewGuid(),
                 FirstName = "Test1",
@@ -72,19 +65,18 @@ namespace NovestraTodo.Tests.Controllers
 
             };
             _mockUserService.Setup(service => service.GetUserByUsername(userName))
-                .ReturnsAsync(new Core.Entities.UserEntity
+                .ReturnsAsync(new UserDto
                 {
                     Id = user.Id,
                     FirstName = user.FirstName,
                     LastName = user.LastName,
                     UserName = user.UserName,
                     Email = user.Email,
-                    Password = "HashedPassword" // Simulate hashed password
                 });
             var result = await _userController.GetByUsername(userName);
             //Assert
             var okResult = Assert.IsType<Microsoft.AspNetCore.Mvc.OkObjectResult>(result.Result);
-            var returnValue = Assert.IsType<Application.DTOs.UserDto>(okResult.Value);
+            var returnValue = Assert.IsType<UserDto>(okResult.Value);
             Assert.Equal(userName, returnValue.UserName);
         }
         [Fact]
@@ -110,13 +102,21 @@ namespace NovestraTodo.Tests.Controllers
                 Email = "testuser11@gmail.com",
                 Password = "HashedPassowrd"
             };
-            _mockUserService.Setup(service => service.UpdateUser(userId, updatedUser)).ReturnsAsync(updatedUser);
+            var updatedUserDto = new UserDto
+            {
+                Id = updatedUser.Id,
+                FirstName = updatedUser.FirstName,
+                LastName = updatedUser.LastName,
+                UserName = updatedUser.UserName,
+                Email = updatedUser.Email,
+            };
+            _mockUserService.Setup(service => service.UpdateUser(userId, updatedUser)).ReturnsAsync(updatedUserDto);
             //Act
             var result = await _userController.Update(userId, updatedUser);
             //Assert
             var okResult = Assert.IsType<Microsoft.AspNetCore.Mvc.OkObjectResult>(result.Result);
-            var returnValue = Assert.IsType<Application.DTOs.UserDto>(okResult.Value);
-            Assert.Equal($"{userId}", returnValue.UserName);
+            var returnValue = Assert.IsType<UserDto>(okResult.Value);
+            Assert.Equal("testuser11",returnValue.UserName);
         }
         [Fact]
         public async Task Delete_ShouldReturnTrue()
@@ -137,9 +137,9 @@ namespace NovestraTodo.Tests.Controllers
             var result = await _userController.Delete(userId);
             //Assert
             var okResult = Assert.IsType<Microsoft.AspNetCore.Mvc.OkObjectResult>(result.Result);
-            var returnValue = Assert.IsType<Application.DTOs.UserDto>(okResult.Value);
+            var returnValue = Assert.IsType<bool>(okResult.Value);
 
-            Assert.Equal(returnValue.Id, userId);
+            Assert.True(returnValue);
         }
     }
 }

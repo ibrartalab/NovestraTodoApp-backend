@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NovestraTodo.Application\NovestraTodo.Application.csproj" />
+    <ProjectReference Include="..\NovestraTodo.Core\NovestraTodo.Core.csproj" />
   </ItemGroup>
 
 </Project>

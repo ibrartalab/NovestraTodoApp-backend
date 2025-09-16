@@ -1,11 +1,8 @@
-﻿using NovestraTodo.Application.Services.Interfaces;
+﻿using NovestraTodo.Application.DTOs;
+using NovestraTodo.Application.Services.Interfaces;
 using NovestraTodo.Core.Entities;
 using NovestraTodo.Core.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace NovestraTodo.Application.Services.Implementation
 {
@@ -17,23 +14,84 @@ namespace NovestraTodo.Application.Services.Implementation
             _userRepository = userRepository;
         }
 
-        public async Task<IEnumerable<UserEntity>> GetUsers() => await _userRepository.GetAllUsersAsync();
+        public async Task<IEnumerable<UserDto>> GetUsers()
+        {
+            var users = await _userRepository.GetAllUsersAsync();
+            var userDtos = users.Select(user => new UserDto
+            {
+                Id = user.Id,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                UserName = user.UserName,
+                Email = user.Email,
+            });
+            return userDtos;
+        }
 
-        public async Task<UserEntity?> GetUserById(Guid id)
+        public async Task<UserDto?> GetUserById(Guid id)
         {
-            return await _userRepository.GetUserByIdAsync(id);
+             var user = await _userRepository.GetUserByIdAsync(id);
+             var userDto = user == null ? null : new UserDto
+             {
+                 Id = user.Id,
+                 FirstName = user.FirstName,
+                 LastName = user.LastName,
+                 UserName = user.UserName,
+                 Email = user.Email,
+             };
+                return userDto;
         }
-        public async Task<UserEntity?> GetUserByUsername(string username)
+        public async Task<UserDto?> GetUserByUsername(string username)
         {
-            return await _userRepository.GetUserByUsernameAsync(username);
+            var user = await _userRepository.GetUserByUsernameAsync(username);
+            var userDto = user == null ? null : new UserDto
+            {
+                Id = user.Id,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                UserName = user.UserName,
+                Email = user.Email,
+            };
+            return userDto;
         }
-        public async Task<UserEntity> AddNewUser(UserEntity entity)
+        public async Task<UserDto> AddNewUser(UserEntity entity)
         {
-            return await _userRepository.AddUserAsync(entity);
+            var user = await _userRepository.GetUserByUsernameAsync(entity.UserName);
+            var newUser =  await _userRepository.AddUserAsync(entity);
+
+            if(user != null)
+            {
+                throw new Exception("Username already exists");
+            }
+
+            var userDto =  new UserDto
+            {
+                Id = newUser.Id,
+                FirstName = newUser.FirstName,
+                LastName = newUser.LastName,
+                UserName = newUser.UserName,
+                Email = newUser.Email,
+            };
+            return userDto;
         }
-        public async Task<UserEntity> UpdateUser(Guid userId, UserEntity entity)
+        public async Task<UserDto> UpdateUser(Guid userId, UserEntity entity)
         {
-            return await _userRepository.UpdateUserAsync(userId, entity);
+            var user = await _userRepository.GetUserByIdAsync(userId);
+            if (user == null)
+            {
+                throw new Exception("User not found");
+            }
+            var updatedUser = await _userRepository.UpdateUserAsync(userId, entity);
+            
+            var userDto = new UserDto
+            {
+                Id = updatedUser.Id,
+                FirstName = updatedUser.FirstName,
+                LastName = updatedUser.LastName,
+                UserName = updatedUser.UserName,
+                Email = updatedUser.Email,
+            };
+            return userDto;
         }
         public async Task<bool> DeleteUser(Guid userId)
         {

@@ -131,29 +131,39 @@ namespace NovestraTodo.Tests.Services
             Assert.Equal(newUser.Email, result.Email);
         }
         [Fact]
-        public async Task AddUserWithExistingOne_ShouldReturnNull()
+        public async Task AddUserWithExistingOne_ThrowExecption_WhenUserNameAlreadyExist()
         {
             //Arrange
-            var existingUser = new Core.Entities.UserEntity
+            var existingUserName = "alicejohnson";
+            var newUser = new Core.Entities.UserEntity
             {
                 Id = Guid.NewGuid(),
                 FirstName = "Alice",
                 LastName = "Johnson",
-                UserName = "alicejohnson",
+                UserName = existingUserName,
                 Email = "alice@gmail.com",
                 Password = "password789",
                 CreatedAt = DateTime.UtcNow
             };
-            _mockUserRepository.Setup(repo => repo.AddUserAsync(existingUser)).ReturnsAsync((Core.Entities.UserEntity?)null);
+            _mockUserRepository.Setup(repo => repo.GetUserByUsernameAsync(existingUserName))
+                .ReturnsAsync(new Core.Entities.UserEntity {
+                    FirstName="Alice",
+                    LastName="Johnson",
+                    UserName=existingUserName,
+                    Email= "alice@gmail.com",
+                    Password="password789",
+                    CreatedAt= DateTime.UtcNow
+                });
             //Act
-            var result = await _userService.AddNewUser(existingUser);
+            var ex = await Assert.ThrowsAsync<Exception>(async () => await _userService.AddNewUser(newUser));
             //Assert
-            Assert.Null(result);
+            Assert.Equal("Username already exists", ex.Message);
+
         }
         [Fact]
         public async Task UpdateUser_ShouldReturnUpdatedUser()
         {
-            //Arrange
+            // Arrange
             var userId = Guid.NewGuid();
             var existingUser = new Core.Entities.UserEntity
             {
@@ -165,6 +175,7 @@ namespace NovestraTodo.Tests.Services
                 Password = "password78910",
                 CreatedAt = DateTime.UtcNow
             };
+
             var updatedUser = new Core.Entities.UserEntity
             {
                 Id = existingUser.Id,
@@ -175,29 +186,30 @@ namespace NovestraTodo.Tests.Services
                 Password = "password78910",
                 CreatedAt = DateTime.UtcNow
             };
-            _mockUserRepository.Setup(repo => repo.UpdateUserAsync(existingUser.Id, updatedUser)).ReturnsAsync(updatedUser);
-            //Act
+
+            // Mock the UpdateUserAsync method to return the updated user
+            _mockUserRepository.Setup(repo => repo.GetUserByIdAsync(userId))
+                               .ReturnsAsync(existingUser);
+
+            _mockUserRepository.Setup(repo => repo.UpdateUserAsync(existingUser.Id, updatedUser))
+                               .ReturnsAsync(updatedUser);
+
+            // Act
             var result = await _userService.UpdateUser(existingUser.Id, updatedUser);
-            //Assert
+
+            // Assert
             Assert.NotNull(result);
-            Assert.Equal("Alice2", result.FirstName);
-            Assert.Equal("alicejohnson2", result.UserName);
+            Assert.Equal("Alice2", result.FirstName);        
+            Assert.Equal("alicejohnson2", result.UserName);  
+            Assert.Equal(existingUser.Email, result.Email); 
+            Assert.Equal(existingUser.Id, result.Id);       
         }
+
         [Fact]
-        public async Task UpdateUserWithInvalidId_ShouldReturnNull()
+        public async Task UpdateUserWithInvalidId_ThrowException_WhenUserNotFound()
         {
-            //Arrange
-            var userId = Guid.NewGuid();
-            var existingUser = new Core.Entities.UserEntity
-            {
-                Id = Guid.NewGuid(),
-                FirstName = "Alice",
-                LastName = "Johnson",
-                UserName = "alicejohnson",
-                Email = "alice@gmail.com",
-                Password = "12334alice",
-                CreatedAt = DateTime.UtcNow
-            };
+            // Arrange
+            var userId = Guid.NewGuid(); // Random userId that doesn't exist
             var updatedUser = new Core.Entities.UserEntity
             {
                 Id = userId,
@@ -205,15 +217,21 @@ namespace NovestraTodo.Tests.Services
                 LastName = "Updated LastName",
                 UserName = "alicejohnson",
                 Email = "alice@gmail.com",
-                Password="12334alice",
-                CreatedAt= DateTime.UtcNow
+                Password = "12334alice",
+                CreatedAt = DateTime.UtcNow
             };
-            _mockUserRepository.Setup(repo => repo.UpdateUserAsync(userId, updatedUser)).ReturnsAsync((Core.Entities.UserEntity?)null);
-            //Act
-            var result = await _userService.UpdateUser(userId, updatedUser);
-            //Assert
-            Assert.Null(result);
+
+            // Mock GetUserByIdAsync to return null, simulating that the user is not found
+            _mockUserRepository.Setup(repo => repo.GetUserByIdAsync(userId))
+                               .ReturnsAsync((Core.Entities.UserEntity?) null);
+
+            // Act & Assert
+            var ex = await Assert.ThrowsAsync<Exception>(() => _userService.UpdateUser(userId, updatedUser));
+
+            // Assert
+            Assert.Equal("User not found", ex.Message);  // Check that the exception message is correct
         }
+
         [Fact]
         public async Task DeleteUser_ShouldReturnTrue()
         {

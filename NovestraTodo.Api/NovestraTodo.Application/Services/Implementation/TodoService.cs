@@ -14,17 +14,65 @@ namespace NovestraTodo.Application.Services.Implementation
             _todoRepository = todoRepository;
         }
 
-        public async Task<IEnumerable<TodoEntity>> GetTodos() => await _todoRepository.GetAllAsync();
-
-        public async Task<List<TodoEntity>> GetUserTodos(Guid userId) => await _todoRepository.GetByUserIdAsync(userId);
-        public async Task<TodoEntity> AddTodo(TodoEntity todoEntity)
+        public async Task<IEnumerable<TodoDto>> GetTodos()
         {
-            return await _todoRepository.AddAsync(todoEntity);
+            var todos = await _todoRepository.GetAllAsync();
+            var todoDtos = todos.Select(todo => new TodoDto
+            {
+                Id = todo.Id,
+                Todo = todo.Todo,
+                IsCompleted = todo.IsCompleted,
+                CompletedAt = todo.CompletedAt,
+                IsRemoved = todo.IsRemoved,
+                UserId = todo.UserId
+            });
+            return todoDtos;
         }
 
-        public async Task<TodoEntity>UpdateTodo(int id,TodoEntity todoEntity)
+        public async Task<IEnumerable<TodoDto>> GetUserTodos(Guid userId){
+                var todos = await _todoRepository.GetByUserIdAsync(userId);
+                var todoDtos = todos.Select(todo => new TodoDto
+                {
+                    Id = todo.Id,
+                    Todo = todo.Todo,
+                    IsCompleted = todo.IsCompleted,
+                    CompletedAt = todo.CompletedAt,
+                    IsRemoved = todo.IsRemoved,
+                    UserId = todo.UserId
+                });
+                return todoDtos;
+        }
+
+        public async Task<TodoDto> AddTodo(TodoEntity todoEntity)
         {
-            return await _todoRepository.UpdateAsync(id,todoEntity);
+            var newTodo = await _todoRepository.AddAsync(todoEntity);
+
+            var todoDto = new TodoDto
+            {
+                Id = newTodo.Id,
+                Todo = newTodo.Todo,
+                IsCompleted = newTodo.IsCompleted,
+                CompletedAt = newTodo.CompletedAt,
+                IsRemoved = newTodo.IsRemoved,
+                UserId = newTodo.UserId
+            };
+            return todoDto;
+        }
+
+        public async Task<TodoDto>UpdateTodo(int id,TodoEntity todoEntity)
+        {
+            var updatedTodo =  await _todoRepository.UpdateAsync(id,todoEntity);
+
+            var todoDto = new TodoDto
+            {
+                Id = updatedTodo.Id,
+                Todo = updatedTodo.Todo,
+                IsCompleted = updatedTodo.IsCompleted,
+                CompletedAt = updatedTodo.CompletedAt,
+                IsRemoved = updatedTodo.IsRemoved,
+                UserId = updatedTodo.UserId
+            };
+            return todoDto;
         }
 
         public async Task<bool> DeleteTodo(int id)
